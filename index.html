@@ -5,36 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lieblingsorte der Webmapper:innen</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 
 <body>
     <header>
-       <img src="images/header.jpg" alt="Hamburg beim Sonnenuntergang">
+        <img src="images/header.jpg" alt="Hamburg bei Sonnenuntergang">
         <!--https://pixabay.com/de/photos/koala-tier-baum-koalab%C3%A4r-tierwelt-6840347/-->
         <a href="https://github.com/PruJe839/nz"><img src="images/user.jpg" alt="Bild mit Link zur Git Seite"></a>
     </header>
     <main>
-        <h1>Lieblingsorte der Webmapper:innen</h1>
-        <h2>Volksparkstadion</h2>
-        <p><strong>Das Volksparkstadion</strong> ist ein Fußballstadion in Hamburg. Es befindet sich innerhalb des Stadtteils Bahrenfeld im Altonaer Volkspark und ist die Heimspielstätte des Hamburger SV. Das Stadion wurde 1953 eröffnet und von 1998 bis 2000 zu einem reinen Fußballstadion umgebaut. Neben Fußballspielen finden auch Konzerte und andere Veranstaltungen im Stadion statt. <br>
-            Das Volksparkstadion ist ein Stadion der UEFA-Kategorie 4 und verfügt über 57.000 Zuschauerplätzen, von denen 10.000 Stehplätze, 3.620 Business-Seats, 711 Logenplätze und 120 rollstuhlgerechte Plätze sind. Für internationale Spiele, bei denen eine reine Sitzplatzbestuhlung vorgeschrieben ist, werden die unter den Stehplätzen verborgenen Klappsitze benutzt, wodurch sich die Kapazität des Stadions auf 51.500 Plätze verringert. <br> Neben den Heimspielen des HSV war das Stadion Austragungsort von zwei Fußball-Weltmeisterschaften (1974 und 2006) und zwei Fußball-Europameisterschaften (1988 und 2024) sowie des Europa-League-Finals 2010. Die Eigentümerin und Betreiberin des Stadions ist die HSV Fußball AG. </p>
-        <a href="https://de.wikipedia.org/wiki/Volksparkstadion">Quelle: Wikipedia</a>
-        <figure>
-            <img src="images/attraction.jpg" alt="Volksparkstadion von innen">
-            <!--https://pixabay.com/de/photos/fu%C3%9Fballstadion-sportstadion-3952062/-->
-            <figcaption>Blick ins innere des Stadions (Quelle: <a href="https://pixabay.com/de/photos/fu%C3%9Fballstadion-sportstadion-3952062/">Pixabay</a>)</figcaption>
-        </figure>
-        <h2>Übersichtskarte</h2>
-        <div id="map" style="width:900px;height:600px;border:1px solid silver"></div>
-        <h3>Links</h3>
-        <ul>
-            <li><a href="https://de.wikipedia.org/wiki/Hamburg">Hamburg</a></li>
-            <li><a href="https://de.wikipedia.org/wiki/Hamburger_SV">HSV</a></li>
-            <li><a href="https://de.wikipedia.org/wiki/Fu%C3%9Fball-Bundesliga">Bundesliga</a></li>
-        </ul>
+        <article>
+            <h1>Lieblingsorte der Webmapper:innen</h1>
+            <h2>Volksparkstadion</h2>
+            <p><strong>Das Volksparkstadion</strong> ist ein Fußballstadion in Hamburg. Es befindet sich innerhalb des
+                Stadtteils Bahrenfeld im Altonaer Volkspark und ist die Heimspielstätte des Hamburger SV. Das Stadion
+                wurde 1953 eröffnet und von 1998 bis 2000 zu einem reinen Fußballstadion umgebaut. Neben Fußballspielen
+                finden auch Konzerte und andere Veranstaltungen im Stadion statt. <br>
+                <em>Das Volksparkstadion</em> ist ein Stadion <strong><em>der UEFA-Kategorie 4</em></strong> und verfügt über 57.000 Zuschauerplätzen, von
+                denen 10.000 Stehplätze, 3.620 Business-Seats, 711 Logenplätze und 120 rollstuhlgerechte Plätze sind.
+                Für internationale Spiele, bei denen eine reine Sitzplatzbestuhlung vorgeschrieben ist, werden die unter
+                den Stehplätzen verborgenen Klappsitze benutzt, wodurch sich die Kapazität des Stadions auf 51.500
+                Plätze verringert. <br> Neben den Heimspielen des HSV war das Stadion Austragungsort von zwei
+                Fußball-Weltmeisterschaften (1974 und 2006) und zwei Fußball-Europameisterschaften (1988 und 2024) sowie
+                des Europa-League-Finals 2010. Die Eigentümerin und Betreiberin des Stadions ist die HSV Fußball AG.
+            </p>
+            <a href="https://de.wikipedia.org/wiki/Volksparkstadion">Quelle: Wikipedia</a>
+            <figure>
+                <img src="images/attraction.jpg" alt="Volksparkstadion von innen">
+                <!--https://pixabay.com/de/photos/fu%C3%9Fballstadion-sportstadion-3952062/-->
+                <figcaption>Blick ins innere des Stadions (Quelle: <a
+                        href="https://pixabay.com/de/photos/fu%C3%9Fballstadion-sportstadion-3952062/">Pixabay</a>)
+                </figcaption>
+            </figure>
+            <h2>Übersichtskarte</h2>
+            <div id="map" style="width:900px;height:600px;border:1px solid silver"></div>
+            <h3>Links</h3>
+            <ul>
+                <li><a href="https://de.wikipedia.org/wiki/Hamburg">Hamburg</a></li>
+                <li><a href="https://de.wikipedia.org/wiki/Hamburger_SV">HSV</a></li>
+                <li><a href="https://de.wikipedia.org/wiki/Fu%C3%9Fball-Bundesliga">Bundesliga</a></li>
+            </ul>
+        </article>
     </main>
     <footer>
         <h4>Navigation zu anderen Seiten</h4>
