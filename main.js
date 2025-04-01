@@ -31,10 +31,10 @@ const STOPS = [
     },
     {
         nr: 3,
-        title: "Auckland",
+        title: "Boston",
         user: "samuesl",
-        lat: -36.83,
-        lng: 174.8,
+        lat: 42.35,
+        lng: -71.05,
         zoom: 13,
     },
     {
@@ -87,20 +87,20 @@ const STOPS = [
         zoom: 14,
     },
     {
-        title: "Picton",
+        title: "Azoren",
         user: "pauly0602",
         nr: 10,
-        lat: -41.29,
-        lng: 174.0,
+        lat: 37.77,
+        lng: -25.46,
         zoom: 11,
     },
     {
         nr: 11,
-        title: "Nelson",
+        title: "Sardinien",
         user: "lujehle",
-        lat: -41.270833,
-        lng: 173.284167,
-        zoom: 11,
+        lat: 40.027778,
+        lng: 9.069444,
+        zoom: 7,
     },
     {
         nr: 12,
@@ -145,10 +145,10 @@ const STOPS = [
     },
     {
         nr: 20,
-        title: "Doubtful Sound",
+        title: "Singapur",
         user: "florentinebusch",
-        lat: -45.317222,
-        lng: 166.988333,
+        lat: 1.283333,
+        lng: 103.833333,
         zoom: 11,
     },
     {
@@ -169,17 +169,17 @@ const STOPS = [
     },
     {
         nr: 24,
-        title: "Moeraki Boulders",
+        title: "Sevilla",
         user: "StephanPumpernik",
-        lat: -45.345275,
-        lng: 170.826061,
+        lat: 37.3925,
+        lng: -5.9925,
         zoom: 13,
     },
     {
-        lat: -44.116667,
-        lng: 170.166667,
+        lat: 49.577037,
+        lng: 6.114122,
         zoom: 11,
-        title: "Lake Pukaki",
+        title: "Stade de Luxembourg",
         nr: 25,
         user: "PriPh625",
     },
@@ -192,12 +192,13 @@ const STOPS = [
         lng: 8.08,
     },
     {
+
         nr: 29,
-        title: 'Kaikoura',
+        title: 'Utrecht',
         user: 'jessimeteo',
-        lat: -42.411667,
-        lng: 173.682222,
-        zoom: 11
+        lat: 52.088889,
+        lng: 5.115556,
+        zoom: 13
     },
 
 ];
@@ -238,18 +239,18 @@ for (let i = 0; i < STOPS.length; i++) {
     let option = document.createElement("option");
     option.value = STOPS[i].user;
     option.text = STOPS[i].title;
-    if (STOPS[i].user == "Pruje839"){
+    if (STOPS[i].user == "Pruje839") {
         option.selected = true;
     }
-    document.querySelector("#pulldown select").appendChild(option); 
+    document.querySelector("#pulldown select").appendChild(option);
 
 }
 
 //auf Änderungen beim Pulldown reagieren 
-document.querySelector("#pulldown select").onchange = function(evt) {
+document.querySelector("#pulldown select").onchange = function (evt) {
     let url = `https://${evt.target.value}.github.io/nz`
     //console.log(evt.target.value);
     //console.log(url);
-    window.location = url; 
+    window.location = url;
 
 }
