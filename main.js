@@ -206,6 +206,15 @@ const STOPS = [
 // Karte initialisieren 
 let map = L.map('map');
 
+// Maßstab einfügen 
+L.control.scale({
+    imperial: false,
+}).addTo(map);
+
+// Eine LayerGroup für alle Marker, die auch im Overlay auftaucht 
+let markerGroup = L.layerGroup().addTo(map);
+
+
 //Hintergrundkarte definieren
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -228,6 +237,8 @@ for (let i = 0; i < STOPS.length; i++) {
             
             
     `);
+    // Marker zur Gruppe hinzufügen
+    marker.addTo(markerGroup);
 
     //auf eigene Etappe blicken und Popup öffnen
     if (STOPS[i].user == "Pruje839") {
@@ -244,7 +255,17 @@ for (let i = 0; i < STOPS.length; i++) {
     }
     document.querySelector("#pulldown select").appendChild(option);
 
-}
+};
+//Layercontrol
+L.control.layers({
+    "OpenStreetMap": L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(map),
+    "OpenTopoMap": L.tileLayer.provider('OpenTopoMap'),
+    "ESRIWorldImagery": L.tileLayer.provider('Esri.WorldImagery'),
+
+},{
+    "Lieblingsorte": markerGroup,
+}).addTo(map);
+
 
 //auf Änderungen beim Pulldown reagieren 
 document.querySelector("#pulldown select").onchange = function (evt) {
@@ -253,4 +274,4 @@ document.querySelector("#pulldown select").onchange = function (evt) {
     //console.log(url);
     window.location = url;
 
-}
+};
