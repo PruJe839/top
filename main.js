@@ -262,7 +262,7 @@ L.control.layers({
     "OpenTopoMap": L.tileLayer.provider('OpenTopoMap'),
     "ESRIWorldImagery": L.tileLayer.provider('Esri.WorldImagery'),
 
-},{
+}, {
     "Lieblingsorte": markerGroup,
 }).addTo(map);
 
