@@ -225,7 +225,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 for (let i = 0; i < STOPS.length; i++) {
 
     //Maker zeichnen
-    let marker = L.marker([STOPS[i].lat, STOPS[i].lng]).addTo(map);
+    let marker = L.marker([STOPS[i].lat, STOPS[i].lng]);
 
     //Popup definieren
     marker.bindPopup(`
