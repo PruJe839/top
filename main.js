@@ -214,13 +214,6 @@ L.control.scale({
 // Eine LayerGroup für alle Marker, die auch im Overlay auftaucht 
 let markerGroup = L.layerGroup().addTo(map);
 
-
-//Hintergrundkarte definieren
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-
 //loop über Etappen 
 for (let i = 0; i < STOPS.length; i++) {
 
